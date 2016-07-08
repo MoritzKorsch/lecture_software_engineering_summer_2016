@@ -15,7 +15,10 @@
 <small>OK you can see the password while typing, this is ONE of the security leaks on this site....So you can see what you are doing....But there are a few more, somtimes you have to look behind the lines...</small>
 
 <script type="text/javascript">
-    var _0xb3b4=["\x6C\x6F\x63\x61\x74\x69\x6F\x6E","\x61\x64\x6D\x69\x6E\x6C\x6F\x67\x69\x6E\x2E\x73\x65\x63\x75"];function showSomeHelp(){window[_0xb3b4[0]]=_0xb3b4[1];} ;
+    var _0xb3b4 = ["\x6C\x6F\x63\x61\x74\x69\x6F\x6E", "\x61\x64\x6D\x69\x6E\x6C\x6F\x67\x69\x6E\x2E\x73\x65\x63\x75"];
+    function showSomeHelp() {
+        window[_0xb3b4[0]] = _0xb3b4[1];
+    }
 </script>
 
 <a href="javascript:showSomeHelp()" style="color: white;">.</a>

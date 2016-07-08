@@ -1,18 +1,16 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+
+<% if( session.getAttribute("loggedIn") != null && (Boolean) session.getAttribute("loggedIn") ){ %>
+	<c:set var="loggedIn" value="${true}"/>
+<%} else{ %>
+	<c:set var="loggedIn" value="${false}"/>
+<%} %>
+
 <jsp:include page="head.jsp"/>
-
-<h2>This supersafe, high performant and well designed page is brought to you by Munich Security Research Group</h2>
-
-<p>
-    Never ever there are any XSS problems,possible Sql-Injections or other security leaks....
-</p>
-
-
-    <div style="font-size: 3em"><b><a href="help.secu">First lesson....follow this link (README)</a></b></div>
-    <h3>What is the second lesson and third......and n`th lesson?</h3>
-    Just find security leaks on this page and his subpages... <br/>
-
-    <img src="img/back.png" alt="" width="400px">
-
-
-<jsp:include page="WEB-INF/help/index_help.jsp"/>
+<c:if test="${!loggedIn}">
+<h3>Welcome to our non-CSS fully functional page!</h3>
+</c:if>
+<c:if test="${loggedIn}">
+<h3>Welcome ${session.getAttribute("userName")}</h3>
+</c:if>
 <jsp:include page="foot.jsp"/>
